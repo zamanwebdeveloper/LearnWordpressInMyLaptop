@@ -56,3 +56,12 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 .screen-reader-text {
 	display: none;
 }
+
+.headbar {
+	background: #fff;
+	padding: 10px;
+	font-size: 25px;
+	text-align: center;
+	font-weight: 700;
+	border: 1px solid #fefe3f;
+}

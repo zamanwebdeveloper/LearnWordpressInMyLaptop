@@ -3,8 +3,10 @@
                         <div class="siderbar-widget">
                             <h4 class="sidebar-widget-title">Search</h4>
                             <div class="search-form">
-                                <input class="search-field" placeholder="Search" value="" type="text">
-                                <button type="submit"><i class="fa fa-search"></i></button>
+                                <form action="<?php echo home_url('/'); ?>" method="get">
+                                    <input class="search-field" placeholder="Search" value="" type="search" name="s">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
                             </div>
                         </div>
                         <div class="siderbar-widget">
