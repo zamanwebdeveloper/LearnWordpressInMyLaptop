@@ -19,3 +19,50 @@ set_post_thumbnail_size( 200, 200, true );
 
 add_image_size( 'myFituredImage', 300, 300, true );
 add_image_size( 'onlywidthimage', 300, true );
+
+/**
+ * Widget Support
+ */
+function my_widgets_sidebar(){
+		register_sidebar( array(
+		'name'          => __( 'Home Page Sidebar One', 'zamanwebdeveloper' ),
+		'id'            => 'widget-home-one',
+		'before_widget' => '<div class="siderbar-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="sidebar-widget-title">',
+		'after_title'   => '</h4>',
+	) );
+		register_sidebar( array(
+		'name'          => __( 'Footer Widget One', 'zamanwebdeveloper' ),
+		'id'            => 'footer-one',
+		'before_widget' => '<div class="footer-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+		register_sidebar( array(
+		'name'          => __( 'Footer Widget Two', 'zamanwebdeveloper' ),
+		'id'            => 'footer-two',
+		'before_widget' => '<div class="footer-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+		register_sidebar( array(
+		'name'          => __( 'Footer Widget Three', 'zamanwebdeveloper' ),
+		'id'            => 'footer-three',
+		'before_widget' => '<div class="footer-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+		register_sidebar( array(
+		'name'          => __( 'Footer Widget Four', 'zamanwebdeveloper' ),
+		'id'            => 'footer-four',
+		'before_widget' => '<div class="footer-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'my_widgets_sidebar' );
