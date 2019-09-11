@@ -66,3 +66,12 @@ function my_widgets_sidebar(){
 	) );
 }
 add_action( 'widgets_init', 'my_widgets_sidebar' );
+
+function zaman_webdeveloper_move_comment_field_to_bottom( $fields ) {
+$comment_field = $fields['comment'];
+unset( $fields['comment'] );
+$fields['comment'] = $comment_field;
+return $fields;
+}
+ 
+add_filter( 'comment_form_fields', 'zaman_webdeveloper_move_comment_field_to_bottom' );
