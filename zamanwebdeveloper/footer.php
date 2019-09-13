@@ -72,10 +72,10 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 tac">
                     <div class="emergency-call mrb-50">
-                        <span class="emergency-icon"><i class="flaticon-office-telephone"></i></span>
-                        <span class="des">For emergency cases</span>
-                        <span class="phone">0-000-000-0000</span>
-                        <div class="underline_sep"><i class="fa fa-car"></i></div>
+                        <!-- <span class="emergency-icon"><i class="flaticon-office-telephone"></i></span> -->
+                        <span class="des">For Hire Developer</span>
+                        <span class="phone">+880 1740301579</span>
+                        <div class="underline_sep"><i class="fa fa-phone"></i></div>
                     </div>
                 </div>
             </div>

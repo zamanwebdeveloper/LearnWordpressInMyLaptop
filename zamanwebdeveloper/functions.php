@@ -25,7 +25,8 @@ add_image_size( 'onlywidthimage', 300, true );
  */
 function my_widgets_sidebar(){
 		register_sidebar( array(
-		'name'          => __( 'Home Page Sidebar One', 'zamanwebdeveloper' ),
+		'name'          => esc_html__( 'Home Page Sidebar One', 'zamanwebdeveloper' ),
+		'description'   => esc_html__( 'This is Sidebar One description ....', 'zamanwebdeveloper' ),
 		'id'            => 'widget-home-one',
 		'before_widget' => '<div class="siderbar-widget">',
 		'after_widget'  => '</div>',
@@ -33,7 +34,8 @@ function my_widgets_sidebar(){
 		'after_title'   => '</h4>',
 	) );
 		register_sidebar( array(
-		'name'          => __( 'Footer Widget One', 'zamanwebdeveloper' ),
+		'name'          => esc_html__( 'Footer Widget One', 'zamanwebdeveloper' ),
+		'description'   => esc_html__( 'This is Footer Widget One description ....', 'zamanwebdeveloper' ),
 		'id'            => 'footer-one',
 		'before_widget' => '<div class="footer-widget">',
 		'after_widget'  => '</div>',
@@ -41,7 +43,8 @@ function my_widgets_sidebar(){
 		'after_title'   => '</h2>',
 	) );
 		register_sidebar( array(
-		'name'          => __( 'Footer Widget Two', 'zamanwebdeveloper' ),
+		'name'          => esc_html__( 'Footer Widget Two', 'zamanwebdeveloper' ),
+		'description'   => esc_html__( 'This is Footer Widget Two description ....', 'zamanwebdeveloper' ),
 		'id'            => 'footer-two',
 		'before_widget' => '<div class="footer-widget">',
 		'after_widget'  => '</div>',
@@ -49,7 +52,8 @@ function my_widgets_sidebar(){
 		'after_title'   => '</h2>',
 	) );
 		register_sidebar( array(
-		'name'          => __( 'Footer Widget Three', 'zamanwebdeveloper' ),
+		'name'          => esc_html__( 'Footer Widget Three', 'zamanwebdeveloper' ),
+		'description'   => esc_html__( 'This is Footer Widget Three description ....', 'zamanwebdeveloper' ),
 		'id'            => 'footer-three',
 		'before_widget' => '<div class="footer-widget">',
 		'after_widget'  => '</div>',
@@ -57,7 +61,8 @@ function my_widgets_sidebar(){
 		'after_title'   => '</h2>',
 	) );
 		register_sidebar( array(
-		'name'          => __( 'Footer Widget Four', 'zamanwebdeveloper' ),
+		'name'          => esc_html__( 'Footer Widget Four', 'zamanwebdeveloper' ),
+		'description'   => esc_html__( 'This is Footer Widget Four description ....', 'zamanwebdeveloper' ),
 		'id'            => 'footer-four',
 		'before_widget' => '<div class="footer-widget">',
 		'after_widget'  => '</div>',
@@ -67,6 +72,8 @@ function my_widgets_sidebar(){
 }
 add_action( 'widgets_init', 'my_widgets_sidebar' );
 
+// How to move comment text or any field to bottom in wordpress
+
 function zaman_webdeveloper_move_comment_field_to_bottom( $fields ) {
 $comment_field = $fields['comment'];
 unset( $fields['comment'] );
@@ -75,3 +82,15 @@ return $fields;
 }
  
 add_filter( 'comment_form_fields', 'zaman_webdeveloper_move_comment_field_to_bottom' );
+
+// How to move comment text or any field to bottom in wordpress
+
+function zaman_webdeveloper_any_field_from_wordpress( $fields ) {
+	// unset( $fields['author'] );
+	// unset( $fields['email'] );
+	// unset( $fields['url'] );
+	// unset( $fields['comment'] );
+	return $fields;
+}
+ 
+add_filter( 'comment_form_fields', 'zaman_webdeveloper_any_field_from_wordpress' );
