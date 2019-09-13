@@ -34,15 +34,24 @@ function my_widgets_sidebar(){
 		'after_title'   => '</h4>',
 	) );
 		register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget One', 'zamanwebdeveloper' ),
-		'description'   => esc_html__( 'This is Footer Widget One description ....', 'zamanwebdeveloper' ),
-		'id'            => 'footer-one',
-		'before_widget' => '<div class="footer-widget">',
+		'name'          => esc_html__( 'Footer Contact Widget', 'zamanwebdeveloper' ),
+		'description'   => esc_html__( 'This is Footer Contact Widget description ....', 'zamanwebdeveloper' ),
+		'id'            => 'footer-contact',
+		'before_widget' => '<div class="emergency-call mrb-50">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 		register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widget', 'zamanwebdeveloper' ),
+		'description'   => esc_html__( 'This is Footer Widget description ....', 'zamanwebdeveloper' ),
+		'id'            => 'footer-widget',
+		'before_widget' => '<div class="col-md-3 col-sm-6 col-xs-12"><div class="footer-widget">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+		/*register_sidebar( array(
 		'name'          => esc_html__( 'Footer Widget Two', 'zamanwebdeveloper' ),
 		'description'   => esc_html__( 'This is Footer Widget Two description ....', 'zamanwebdeveloper' ),
 		'id'            => 'footer-two',
@@ -68,7 +77,7 @@ function my_widgets_sidebar(){
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	) );*/
 }
 add_action( 'widgets_init', 'my_widgets_sidebar' );
 

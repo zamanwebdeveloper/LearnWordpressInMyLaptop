@@ -71,40 +71,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 tac">
-                    <div class="emergency-call mrb-50">
-                        <!-- <span class="emergency-icon"><i class="flaticon-office-telephone"></i></span> -->
-                        <span class="des">For Hire Developer</span>
-                        <span class="phone">+880 1740301579</span>
-                        <div class="underline_sep"><i class="fa fa-phone"></i></div>
-                    </div>
+
+                    <!-- <span class="emergency-icon"><i class="flaticon-office-telephone"></i></span> -->
+
+                    <?php dynamic_sidebar('footer-contact'); ?>
+
+                                        
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                
 
-                    <!-- Dinamic Footer Widget One -->
-                    <?php dynamic_sidebar('footer-one'); ?>
+                    <!-- Dinamic Footer Widget -->
+                    <?php dynamic_sidebar('footer-widget'); ?>
 
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-
-                    <!-- Dinamic Footer Widget Two -->
-                    <?php dynamic_sidebar('footer-two'); ?>
-
+                
+                <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+                
+                    Dinamic Footer Widget Two
+                    <?php //dynamic_sidebar('footer-two'); ?>
+                
                 </div>
                 
                 <div class="col-md-3 col-sm-6 col-xs-12">
-
-                    <!-- Dinamic Footer Widget Three -->
-                    <?php dynamic_sidebar('footer-three'); ?>
-
+                
+                    Dinamic Footer Widget Three
+                    <?php //dynamic_sidebar('footer-three'); ?>
+                
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     
-                    <!-- Dinamic Footer Widget Four -->
-                    <?php dynamic_sidebar('footer-four'); ?>
-
-                </div>
+                    Dinamic Footer Widget Four
+                    <?php //dynamic_sidebar('footer-four'); ?>
+                
+                </div> -->
             </div>
         </div>
     </div>
