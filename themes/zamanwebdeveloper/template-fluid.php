@@ -5,6 +5,25 @@
 get_header(); 
 ?>
     <!-- Header area end -->
+    <!-- Banner Section -->
+    <section id="banner-wrap" class="banner-section">
+        <div class="banner-section-overlay">
+            <div class="banner-section-text">
+                <div class="banner-text-inner">
+                    <h2> About Us</h2>
+                    <div class="bradcome">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="fa fa-long-arrow-right"></i></li>
+                            <li><a href="contact-1.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ Banner Section -->
+
     <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
     <!-- News / Blog section  

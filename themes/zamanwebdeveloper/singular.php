@@ -4,7 +4,7 @@
 
 
     <!--Main Slider-->
-    <section id="home-slider-v1" class="slider-v1">
+    <!-- <section id="home-slider-v1" class="slider-v1">
         <div class="main-slider-v1 owl-item">
             <div class="item" style="background-image:url(images/resource/home-slide-1.jpg);">
                 <div class="overlay"></div>
@@ -82,7 +82,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Slider End -->
 
     <!-- News / Blog section  
@@ -92,7 +92,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 ftl">
                     <div class="single-page-details">
-                        <h2><?php the_title(); ?></h2>
+                        <h2><?php the_title(); ?> Singular Page</h2>
                         <?php the_content(); ?>
                         
 
