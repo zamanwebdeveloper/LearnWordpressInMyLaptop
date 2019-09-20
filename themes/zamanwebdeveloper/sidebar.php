@@ -35,29 +35,79 @@
 
                         <?php dynamic_sidebar('widget-home-one'); ?>
 
+
+						<!-- Technology Category Sart -->
                         <div class="siderbar-widget">
-                            <h4 class="sidebar-widget-title">RECENT NEWS</h4>
+                            <h4 class="sidebar-widget-title">Technology Category</h4>
+                            <?php
+                            $techno = new Wp_Query(array(
+                            	'post_type' => 'post',
+                            	'posts_per_page' => 4,
+                            	'orderby' => 'title',
+                            	'order' => 'DESC',
+                            	'category_name' => 'Technology' 
+                            )); 
+
+                            if(have_posts()) : while($techno->have_posts()) : $techno->the_post(); ?>
+
                             <div class="widget-news">
-                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/resource/blog-1.jpg" alt=""></a>
+                                <a href="#"><?php the_post_thumbnail('myFituredImage', array('class' => 'my-post-thumb')); ?></a>
                                 <div class="news-text">
-                                    <p>The Act makes provision for the interpretation of Acts of Parliament.</p>
-                                    <a class="" href="#">Read More</a>
+                                    <p><?php the_title(); ?></p>
+                                    <a class="" href="<?php the_permalink(); ?>">Read More</a>
                                 </div>
                             </div>
+                        <?php endwhile; ?>
+                        <?php endif; ?>                            
+                        </div>
+                        <!-- Technology Category End -->
+
+                        <div class="siderbar-widget">
+                            <h4 class="sidebar-widget-title">Random Post</h4>
+                            <?php
+                            $techno = new Wp_Query(array(
+                            	'post_type' => 'post',
+                            	'posts_per_page' => 4,
+                            	'orderby' => 'rand',
+                            	'order' => 'DESC',
+                            	// 'category_name' => 'Technology' 
+                            )); 
+
+                            if(have_posts()) : while($techno->have_posts()) : $techno->the_post(); ?>
+
                             <div class="widget-news">
-                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/resource/blog-2.jpg" alt=""></a>
+                                <a href="#"><?php the_post_thumbnail('myFituredImage', array('class' => 'my-post-thumb')); ?></a>
                                 <div class="news-text">
-                                    <p>The Act makes provision for the interpretation of Acts of Parliament.</p>
-                                    <a class="" href="#">Read More</a>
+                                    <p><?php the_title(); ?></p>
+                                    <a class="" href="<?php the_permalink(); ?>">Read More</a>
                                 </div>
                             </div>
+                        <?php endwhile; ?>
+                        <?php endif; ?>                            
+                        </div>
+                        <!-- Development Category -->
+                        <div class="siderbar-widget">
+                            <h4 class="sidebar-widget-title">Development Category</h4>
+                            <?php
+                            $techno = new Wp_Query(array(
+                            	'post_type' => 'post',
+                            	'posts_per_page' => 4,
+                            	'orderby' => 'title',
+                            	'order' => 'DESC',
+                            	'category_name' => 'Development' 
+                            )); 
+
+                            if(have_posts()) : while($techno->have_posts()) : $techno->the_post(); ?>
+
                             <div class="widget-news">
-                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/resource/blog-3.jpg" alt=""></a>
+                                <a href="#"><?php the_post_thumbnail('myFituredImage', array('class' => 'my-post-thumb')); ?></a>
                                 <div class="news-text">
-                                    <p>The Act makes provision for the interpretation of Acts of Parliament.</p>
-                                    <a class="" href="#">Read More</a>
+                                    <p><?php the_title(); ?></p>
+                                    <a class="" href="<?php the_permalink(); ?>">Read More</a>
                                 </div>
                             </div>
+                        <?php endwhile; ?>
+                        <?php endif; ?>
                         </div>
                         <div class="siderbar-widget">
                             <h4 class="sidebar-widget-title">Tags</h4>
